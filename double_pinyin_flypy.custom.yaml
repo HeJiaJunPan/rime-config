@@ -71,11 +71,11 @@ patch:
     - melt_eng
     
   "engine/translators/+":
+    - table_translator@custom_phrase
     - table_translator@melt_eng
     - lua_translator@*date_translator
     - lua_translator@*number_translator
     - lua_translator@*lunar
-    - table_translator@custom_phrase
   
   # 以词定字，快捷键[]
   "engine/processors/@before 0":
@@ -103,11 +103,15 @@ patch:
   # 自定义短语
   custom_phrase:
     dictionary: ""
-    user_dict: custom_phrase_double  # 需要手动创建 custom_phrase_double.txt 文件
+    # 指定自定义短语文件
+    user_dict: custom_phrase_double
     db_class: stabledb
-    enable_completion: false # 补全提示
-    enable_sentence: false   # 禁止造句
-    initial_quality: 99      # custom_phrase 的权重应该比 pinyin 和 melt_eng 大
+    # 禁止补全提示
+    enable_completion: false
+    # 禁止造句
+    enable_sentence: false
+    # custom_phrase 的权重应该比 pinyin 和 melt_eng 大
+    initial_quality: 99
     
     
   schema/icon: icons/chinese.ico
