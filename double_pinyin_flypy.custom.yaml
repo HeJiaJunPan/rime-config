@@ -41,7 +41,16 @@ patch:
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
   # V模式 小键盘数字键进行候选词选择，主键盘数字键是输入词
   "speller/alphabet": zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
-  "punctuator/import_preset": symbols_caps_v
+  
+  punctuator:
+    __include: default:/punctuator
+    full_shape:
+      __include: default:/punctuator/full_shape
+    half_shape:
+      __include: default:/punctuator/half_shape
+    symbols:
+      __include: symbols_caps_v:/symbols
+      
   "recognizer/patterns/+":
     punct: "^V([0-9]0?|[A-Za-z]+)$"
     number: "^R[0-9]+[.]?[0-9]*"
@@ -103,14 +112,10 @@ patch:
   # 自定义短语
   custom_phrase:
     dictionary: ""
-    # 指定自定义短语文件
     user_dict: custom_phrase_double
     db_class: stabledb
-    # 禁止补全提示
     enable_completion: false
-    # 禁止造句
     enable_sentence: false
-    # custom_phrase 的权重应该比 pinyin 和 melt_eng 大
     initial_quality: 99
     
     
