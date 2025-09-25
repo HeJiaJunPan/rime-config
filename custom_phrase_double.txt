@@ -23,13 +23,14 @@
 #
 # 此行之后不能写注释
 
+# 改用opencc实现
+#①	yi	1
+#②	er	1
+#③	sj	1
+#④	si	1
+#⑤	wu	1
+#⑥	lq	1
+#⑦	qi	1
+#⑧	ba	1
+#⑨	jq	1
 
-①	yi	1
-②	er	1
-③	sj	1
-④	si	1
-⑤	wu	1
-⑥	lq	1
-⑦	qi	1
-⑧	ba	1
-⑨	jq	1
