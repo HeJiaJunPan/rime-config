@@ -118,7 +118,7 @@ patch:
   reduce_emoji_filter:
     mode: all
     idx: 5
-    words: []
+    words: [①,②,③,④,⑤,⑥,⑦,⑧,⑨,⑩]
     
   # 详细介绍 https://dvel.me/posts/make-rime-en-better/#短单词置顶的问题
   # 正常情况： 输入 rug 得到 「1.rug 2.如果 …… 」
