@@ -40,6 +40,10 @@ patch:
     select_first_character: "bracketleft"  # 左中括号 [
     select_last_character: "bracketright"  # 右中括号 ]
 
+  # 重写方案切换快捷键，取消F4快捷切换键
+  switcher/hotkeys:
+    - "Control+grave"
+    - "Control+Shift+grave"
 
   punctuator:
     #在此处指定的字符，在数字后被输入，若再次输入数字，则连同数字直接上屏
@@ -111,4 +115,5 @@ patch:
       '[' : [ 「, 【, 〔, ［ ]
       ']' : [ 」, 】, 〕,  ］ ]
       '{' : [ 『, 〖, ｛ ]
+
       '}' : [ 』, 〗, ｝ ]
